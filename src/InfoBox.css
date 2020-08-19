@@ -1,0 +1,12 @@
+.infoBox__card {
+  padding: 15px;
+}
+
+.infoBox__card h2 {
+  padding: 10px 0;
+}
+
+.infoBox__today {
+  display: flex;
+  align-items: center;
+}
