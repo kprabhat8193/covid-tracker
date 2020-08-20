@@ -1,5 +1,10 @@
+.infoBox {
+  flex: 1;
+}
+
 .infoBox__card {
   padding: 15px;
+  cursor: pointer;
 }
 
 .infoBox__card h2 {
@@ -9,4 +14,12 @@
 .infoBox__today {
   display: flex;
   align-items: center;
+}
+
+.infoBox--selected {
+  border-top: 10px solid #cc1034;
+}
+
+.infoBox--selectedGreen {
+  border-top: 10px solid greenyellow;
 }

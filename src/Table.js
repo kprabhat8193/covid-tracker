@@ -1,5 +1,5 @@
 import React from "react";
-import { sortData } from "./utils";
+import { sortData, formatNumber } from "./utils";
 import "./Table.css";
 
 const Table = ({ tableData, attribute }) => {
@@ -12,7 +12,11 @@ const Table = ({ tableData, attribute }) => {
             <tr key={country}>
               <td>{country}</td>
               <td>
-                <strong>{attribute === "cases" ? cases : deaths}</strong>
+                <strong>
+                  {attribute === "cases"
+                    ? formatNumber(cases, "0,0")
+                    : formatNumber(deaths, "0,0")}
+                </strong>
               </td>
             </tr>
           );

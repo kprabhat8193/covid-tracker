@@ -4,7 +4,20 @@ import numeral from "numeral";
 
 const LineGraph = ({ casesType = "cases" }) => {
   const [data, setData] = useState({});
-
+  const colorDictionary = {
+    cases: {
+      backgroundColor: "rgba(204, 16, 52, 0.5)",
+      borderColor: "#CC1034",
+    },
+    recovered: {
+      backgroundColor: "#adff2f8c",
+      borderColor: "lightgreen",
+    },
+    deaths: {
+      backgroundColor: "rgba(204, 16, 52, 0.5)",
+      borderColor: "#CC1034",
+    },
+  };
   const options = {
     legend: {
       display: false,
@@ -79,7 +92,6 @@ const LineGraph = ({ casesType = "cases" }) => {
     return chartData;
   };
 
-  console.log("CHART DATA: ", data);
   return (
     <div className="lineGraph">
       {data?.length > 0 && (
@@ -88,8 +100,7 @@ const LineGraph = ({ casesType = "cases" }) => {
           data={{
             datasets: [
               {
-                backgroundColor: "rgba(204, 16, 52, 0.5)",
-                borderColor: "#CC1034",
+                ...colorDictionary[casesType],
                 data: data,
               },
             ],

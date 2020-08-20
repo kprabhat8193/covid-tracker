@@ -26,6 +26,10 @@
   margin-bottom: 20px;
 }
 
+.app__dropdown {
+  background-color: white;
+}
+
 .app__stats {
   display: flex;
   justify-content: space-between;
@@ -39,4 +43,21 @@
   .app__right {
     margin-top: 25px;
   }
+}
+
+.app__stats .infoBox:not(:last-child) {
+  margin-right: 20px;
+}
+
+.app__header > h1 {
+  color: #cc1034;
+}
+
+.app__lineGraphContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__right .lineGraph {
+  flex-grow: 1;
 }

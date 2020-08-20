@@ -1,0 +1,21 @@
+.map {
+  height: 500px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 15px;
+  box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.map .leaflet-container {
+  height: 100%;
+}
+
+.map__popupCard {
+  padding: 10px;
+}
+
+.map__popupCard > img {
+  object-fit: contain;
+  height: 100px;
+}
